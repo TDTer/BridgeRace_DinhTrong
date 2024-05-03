@@ -42,5 +42,5 @@ public class GameManager : Singleton<GameManager>
     //{
     //    return gameState == state;
     //}
-  
+
 }
