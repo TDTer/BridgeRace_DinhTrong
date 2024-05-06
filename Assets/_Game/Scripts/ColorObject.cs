@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ColorObject : GameUnit
 {
-
-
     [SerializeField] private ColorData colorData;
     [SerializeField] private Renderer renderer;
     protected ColorType colorType;

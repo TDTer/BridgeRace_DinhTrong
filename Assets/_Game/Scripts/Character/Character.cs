@@ -84,7 +84,6 @@ public class Character : ColorObject
     public bool CanMove(Vector3 nextPos)
     {
         RaycastHit hit;
-
         if (Physics.Raycast(nextPos, Vector3.down, out hit, 2f, stairLayer))
         {
             if (nextPos.z < 0)
@@ -103,9 +102,7 @@ public class Character : ColorObject
                     {
                         RemoveBrick();
                         hit.collider.GetComponent<ColorObject>().ChangeColor(ColorType);
-
                         return true;
-
                     }
                     else
                     {
