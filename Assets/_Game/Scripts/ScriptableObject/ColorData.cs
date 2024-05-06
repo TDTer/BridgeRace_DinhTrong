@@ -18,6 +18,8 @@ public enum ColorType
     None = 0,
     Red = 1,
     Blue = 2,
-    Pink = 3,
-    Yellow = 4,
+    Green = 3,
+    Pink = 4,
+    Yellow = 5,
+    Black = 6,
 }

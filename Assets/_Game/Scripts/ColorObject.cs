@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class ColorObject : GameUnit
 {
-    public ColorType colorType;
+
 
     [SerializeField] private ColorData colorData;
     [SerializeField] private Renderer renderer;
+    protected ColorType colorType;
 
+    public ColorType ColorType { get => colorType; set => colorType = value; }
+
+    private void Awake()
+    {
+        //renderer = GetComponent<SkinnedMeshRenderer>();
+    }
     public void ChangeColor(ColorType colorType)
     {
-        this.colorType = colorType;
+        this.ColorType = colorType;
         renderer.material = colorData.GetColorMat(colorType);
     }
 }

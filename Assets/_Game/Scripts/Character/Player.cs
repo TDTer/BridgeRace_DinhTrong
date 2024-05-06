@@ -8,7 +8,7 @@ public class Player : Character
     // Start is called before the first frame update
     void Start()
     {
-
+        ChangeColor(ColorType.Red);
     }
 
     // Update is called once per frame
@@ -16,9 +16,8 @@ public class Player : Character
     {
         if (Input.GetMouseButton(0))
         {
-            Debug.Log(JoyStick.direction);
             Vector3 nextPosition = TF.position + JoyStick.direction * Time.deltaTime * speed;
-            if (true)
+            if (CanMove(nextPosition))
             {
                 TF.position = CheckGround(nextPosition);
                 ChangeAnim(AnimationState.run);
