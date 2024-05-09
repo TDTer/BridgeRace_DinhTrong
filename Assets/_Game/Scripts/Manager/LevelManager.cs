@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelManager : MonoBehaviour
+public class LevelManager : Singleton<LevelManager>
 {
-    // Start is called before the first frame update
+    public int CharacterAmount => currentLevel.botAmount + 1;
+
+    public Level currentLevel;
+
     void Start()
     {
-        
+        currentLevel.OnInit();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

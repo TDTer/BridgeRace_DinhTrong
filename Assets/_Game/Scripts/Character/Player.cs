@@ -17,7 +17,7 @@ public class Player : Character
         if (Input.GetMouseButton(0))
         {
             Vector3 nextPosition = TF.position + JoyStick.direction * Time.deltaTime * speed;
-            if (CanMove(nextPosition))
+            if (CanMove(nextPosition + Vector3.forward))
             {
                 TF.position = CheckGround(nextPosition);
                 ChangeAnim(AnimationState.run);

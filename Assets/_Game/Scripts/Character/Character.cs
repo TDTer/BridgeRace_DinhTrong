@@ -12,6 +12,7 @@ public class Character : ColorObject
     private List<Brick> brickList = new List<Brick>();
     private float brickHeight = 0.2f;
     private Position locationStack;
+    public Stage stage;
     public enum AnimationState
     {
         idle, run, win
@@ -83,8 +84,10 @@ public class Character : ColorObject
 
     public bool CanMove(Vector3 nextPos)
     {
+
         RaycastHit hit;
-        if (Physics.Raycast(nextPos, Vector3.down, out hit, 2f, stairLayer))
+        // Debug.DrawRay(nextPos + Vector3.up, Vector3.down * 2f, Color.green, 1f);
+        if (Physics.Raycast(nextPos + Vector3.up, Vector3.down, out hit, 2f, stairLayer))
         {
             if (nextPos.z < 0)
             {
@@ -102,6 +105,9 @@ public class Character : ColorObject
                     {
                         RemoveBrick();
                         hit.collider.GetComponent<ColorObject>().ChangeColor(ColorType);
+
+                        // Respawn a new Birck in current Stage
+                        stage.SpawnNewBrick(colorType);
                         return true;
                     }
                     else
