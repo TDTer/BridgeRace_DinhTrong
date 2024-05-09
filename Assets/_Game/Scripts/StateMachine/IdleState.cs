@@ -2,21 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IdleState : IState<Character>
+public class IdleState : IState<Bot>
 {
-    public void OnEnter(Character t)
+    public void OnEnter(Bot t)
+    {
+        t.ChangeAnim(Character.AnimationState.idle);
+    }
+
+    public void OnExecute(Bot t)
     {
 
     }
 
-    public void OnExecute(Character t)
+    public void OnExit(Bot t)
     {
 
     }
-
-    public void OnExit(Character t)
-    {
-
-    }
-
 }

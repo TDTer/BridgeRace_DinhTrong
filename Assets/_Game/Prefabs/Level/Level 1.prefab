@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7318959128104938580}
   - component: {fileID: 4389477841537814214}
   - component: {fileID: 5944125650320129630}
-  m_Layer: 0
-  m_Name: Plane
+  m_Layer: 3
+  m_Name: EndPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,12 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4017723571487679863}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.98}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.016, y: 14.06, z: 81}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6141075675075683748}
+  m_Children:
+  - {fileID: 6141075675075683748}
+  m_Father: {fileID: 2284357508399379238}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7318959128104938580
 MeshFilter:
@@ -140,7 +141,7 @@ Transform:
   - {fileID: 3252445950422403068}
   - {fileID: 3685496926409545714}
   - {fileID: 6207533916861364843}
-  - {fileID: 6141075675075683748}
+  - {fileID: 5114639521555208436}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4075259658965413304
@@ -175,7 +176,7 @@ GameObject:
   - component: {fileID: 1212076322614423493}
   - component: {fileID: 7458424625565112753}
   m_Layer: 0
-  m_Name: EndPoint
+  m_Name: FinishBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -189,13 +190,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6770244676342500667}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.016, y: 14.07, z: 79.081}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.31}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5114639521555208436}
-  m_Father: {fileID: 2284357508399379238}
+  m_Children: []
+  m_Father: {fileID: 5114639521555208436}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6902977047319799258
 MeshFilter:
@@ -371,7 +371,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1745393563777205045, guid: 5ea234f3a8365344083a7f5db7be7b18, type: 3}
       propertyPath: m_Name
-      value: Stage (2)
+      value: Stage 2
       objectReference: {fileID: 0}
     - target: {fileID: 8493306192034935034, guid: 5ea234f3a8365344083a7f5db7be7b18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -448,7 +448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1745393563777205045, guid: 5ea234f3a8365344083a7f5db7be7b18, type: 3}
       propertyPath: m_Name
-      value: Stage (1)
+      value: Stage 1
       objectReference: {fileID: 0}
     - target: {fileID: 8493306192034935034, guid: 5ea234f3a8365344083a7f5db7be7b18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -661,7 +661,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1745393563777205045, guid: 5ea234f3a8365344083a7f5db7be7b18, type: 3}
       propertyPath: m_Name
-      value: Stage
+      value: Stage 0
       objectReference: {fileID: 0}
     - target: {fileID: 8493306192034935034, guid: 5ea234f3a8365344083a7f5db7be7b18, type: 3}
       propertyPath: m_LocalPosition.x

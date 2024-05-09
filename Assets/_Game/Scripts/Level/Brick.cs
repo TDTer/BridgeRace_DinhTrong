@@ -5,4 +5,8 @@ using UnityEngine;
 public class Brick : ColorObject
 {
     public Stage stage;
+    public void ReAddBrick()
+    {
+        stage.AddBrick(this);
+    }
 }

@@ -19,4 +19,8 @@ public class ColorObject : GameUnit
         this.ColorType = colorType;
         renderer.material = colorData.GetColorMat(colorType);
     }
+
+    public override void OnInit()
+    {
+    }
 }

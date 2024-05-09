@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameUnit : MonoBehaviour
+public abstract class GameUnit : MonoBehaviour
 {
     private Transform tf;
     public Transform TF
@@ -17,4 +17,6 @@ public class GameUnit : MonoBehaviour
             return tf;
         }
     }
+
+    public abstract void OnInit();
 }

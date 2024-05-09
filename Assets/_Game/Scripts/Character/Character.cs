@@ -11,25 +11,18 @@ public class Character : ColorObject
     [SerializeField] private Transform brickContainer;
     private List<Brick> brickList = new List<Brick>();
     private float brickHeight = 0.2f;
-    private Position locationStack;
     public Stage stage;
     public enum AnimationState
     {
-        idle, run, win
+        idle, run, dance
     }
     private AnimationState currentAnim;
 
+    public int BrickCount => brickList.Count;
 
-    // Start is called before the first frame update
-    void Start()
+    public override void OnInit()
     {
-        // brickHeight = charaterBrick.GetComponent<Collider>().bounds.size.y;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        ClearBrick();
     }
 
     private void AddBrick()
@@ -44,6 +37,7 @@ public class Character : ColorObject
     {
         if (brickList.Count > 0)
         {
+
             Brick playerBrick = brickList[brickList.Count - 1];
             brickList.RemoveAt(brickList.Count - 1);
             Destroy(playerBrick.gameObject);
@@ -73,7 +67,7 @@ public class Character : ColorObject
     public Vector3 CheckGround(Vector3 nextPoint)
     {
         RaycastHit hit;
-
+        Debug.DrawRay(nextPoint + Vector3.up, Vector3.down * 2f, Color.green, 1f);
         if (Physics.Raycast(nextPoint, Vector3.down, out hit, 2f, groundLayer))
         {
             return hit.point + Vector3.up * 0.1f;
@@ -124,8 +118,8 @@ public class Character : ColorObject
     {
         if (other.CompareTag(GameConstants.BRICK_TAG) && other.GetComponent<ColorObject>().ColorType == colorType)
         {
-            //remove brick
-            Destroy(other.gameObject);
+            // ReAdd Brick to Stage
+            other.GetComponent<Brick>().ReAddBrick();
             AddBrick();
         }
     }
