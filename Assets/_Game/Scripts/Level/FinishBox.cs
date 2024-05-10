@@ -10,6 +10,7 @@ public class FinishBox : MonoBehaviour
         if (character != null)
         {
             character.ChangeAnim(Character.AnimationState.dance);
+            character.OnInit();
         }
     }
 }

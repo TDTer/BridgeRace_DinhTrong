@@ -83,7 +83,7 @@ public class Character : ColorObject
         // Debug.DrawRay(nextPos + Vector3.up, Vector3.down * 2f, Color.green, 1f);
         if (Physics.Raycast(nextPos + Vector3.up, Vector3.down, out hit, 2f, stairLayer))
         {
-            if (nextPos.z < 0)
+            if (nextPos.z - TF.position.z < 1)
             {
                 return true;
             }

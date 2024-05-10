@@ -5,13 +5,13 @@ using UnityEngine;
 public class Player : Character
 {
     [SerializeField] private float speed = 5.0f;
-    // Start is called before the first frame update
-    void Start()
+
+
+    public override void OnInit()
     {
-        ChangeColor(ColorType.Red);
+        base.OnInit();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButton(0))

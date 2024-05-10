@@ -6,7 +6,6 @@ using UnityEngine.AI;
 
 public class Bot : Character
 {
-    [SerializeField] private Transform finishPos;
     IState<Bot> currentState;
     private Vector3 destionation;
     public NavMeshAgent agent;
@@ -14,7 +13,6 @@ public class Bot : Character
     void Start()
     {
         OnInit();
-        ChangeColor(ColorType.Blue);
         ChangeState(new PatrolState());
     }
 
@@ -24,7 +22,7 @@ public class Bot : Character
         if (currentState != null)
         {
             currentState.OnExecute(this);
-            CanMove(TF.position);
+            CanMove(TF.position + Vector3.forward);
             Debug.Log("" + currentState);
         }
     }

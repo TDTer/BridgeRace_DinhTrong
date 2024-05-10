@@ -7,7 +7,6 @@ public class AttackState : IState<Bot>
     public void OnEnter(Bot t)
     {
         t.SetDestination(LevelManager.Ins.FinishPoint);
-        Debug.Log(LevelManager.Ins.FinishPoint);
     }
 
     public void OnExecute(Bot t)

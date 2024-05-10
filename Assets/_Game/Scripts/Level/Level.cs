@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.AI.Navigation;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Level : MonoBehaviour
 {
+    public NavMeshData navMeshData;
     public Transform startPoint;
     public Transform finishPoint;
     public int botAmount;
