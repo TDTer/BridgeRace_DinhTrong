@@ -5,11 +5,15 @@ using UnityEngine.UI;
 
 public class Win : UICanvas
 {
-    public Text score;
-
-    public void MainMenuButton()
+    public void RetryButton()
     {
-        UIManager.Ins.OpenUI<MianMenu>();
-        Close(0);
+        LevelManager.Ins.OnRetry();
+        CloseDirectly();
+    }
+
+    public void NextButton()
+    {
+        LevelManager.Ins.OnNextLevel();
+        CloseDirectly();
     }
 }

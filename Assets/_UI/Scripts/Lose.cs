@@ -5,11 +5,9 @@ using UnityEngine.UI;
 
 public class Lose : UICanvas
 {
-    public Text score;
-
-    public void MainMenuButton()
+    public void RetryButton()
     {
-        UIManager.Ins.OpenUI<MianMenu>();
-        Close(0);
+        LevelManager.Ins.OnRetry();
+        CloseDirectly();
     }
 }

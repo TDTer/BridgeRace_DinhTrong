@@ -10,12 +10,12 @@ public class Bot : Character
     private Vector3 destionation;
     public NavMeshAgent agent;
 
-    void Start()
+    public override void OnInit()
     {
-        OnInit();
-        ChangeState(new PatrolState());
+        base.OnInit();
+        currentState = new IdleState();
+        ChangeState(currentState);
     }
-
 
     void Update()
     {
@@ -23,15 +23,7 @@ public class Bot : Character
         {
             currentState.OnExecute(this);
             CanMove(TF.position + Vector3.forward);
-            Debug.Log("" + currentState);
         }
-    }
-
-    public override void OnInit()
-    {
-        base.OnInit();
-        currentState = new IdleState();
-        ChangeState(currentState);
     }
 
     public void SetDestination(Vector3 position)
@@ -62,5 +54,10 @@ public class Bot : Character
         {
             currentState.OnEnter(this);
         }
+    }
+
+    internal void MoveStop()
+    {
+        agent.enabled = false;
     }
 }

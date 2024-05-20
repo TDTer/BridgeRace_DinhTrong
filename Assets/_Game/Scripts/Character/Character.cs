@@ -48,10 +48,10 @@ public class Character : ColorObject
     {
         for (int i = 0; i < brickList.Count; i++)
         {
-            Brick playerBrick = brickList[i];
-            brickList.RemoveAt(i);
-            Destroy(playerBrick.gameObject);
+            Destroy(brickList[i].gameObject);
         }
+
+        brickList.Clear();
     }
 
     public void ChangeAnim(AnimationState animName)

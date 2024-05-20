@@ -24,6 +24,7 @@ public class LevelManager : Singleton<LevelManager>
     {
         LoadLevel(levelIndex);
         OnInit();
+        UIManager.Ins.OpenUI<MainMenu>();
     }
 
     public void OnInit()
@@ -62,6 +63,10 @@ public class LevelManager : Singleton<LevelManager>
         colorDatas.RemoveAt(rand);
         player.OnInit();
 
+        //update navmesh data
+        NavMesh.RemoveAllNavMeshData();
+        NavMesh.AddNavMeshData(currentLevel.navMeshData);
+
         //bots
         for (int i = 0; i < CharacterAmount - 1; i++)
         {
@@ -70,10 +75,6 @@ public class LevelManager : Singleton<LevelManager>
             bot.OnInit();
             bots.Add(bot);
         }
-
-        //update navmesh data
-        NavMesh.RemoveAllNavMeshData();
-        NavMesh.AddNavMeshData(currentLevel.navMeshData);
     }
     public void LoadLevel(int level)
     {
@@ -84,6 +85,51 @@ public class LevelManager : Singleton<LevelManager>
 
         currentLevel = Instantiate(levelPrefabs[level]);
         currentLevel.OnInit();
+    }
+
+    public void OnStartGame()
+    {
+        GameManager.Ins.ChangeState(GameState.Gameplay);
+        for (int i = 0; i < bots.Count; i++)
+        {
+            bots[i].ChangeState(new PatrolState());
+        }
+    }
+
+    public void OnFinishGame()
+    {
+        for (int i = 0; i < bots.Count; i++)
+        {
+            bots[i].ChangeState(null);
+            bots[i].MoveStop();
+        }
+    }
+
+    public void OnReset()
+    {
+        for (int i = 0; i < bots.Count; i++)
+        {
+            Destroy(bots[i].gameObject);
+        }
+        bots.Clear();
+    }
+
+    internal void OnRetry()
+    {
+        OnReset();
+        LoadLevel(levelIndex);
+        OnInit();
+        UIManager.Ins.OpenUI<MainMenu>();
+    }
+
+    internal void OnNextLevel()
+    {
+        levelIndex++;
+        PlayerPrefs.SetInt("Level", levelIndex);
+        OnReset();
+        LoadLevel(levelIndex);
+        OnInit();
+        UIManager.Ins.OpenUI<MainMenu>();
     }
 
 }
