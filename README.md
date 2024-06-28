@@ -1,3 +1,14 @@
 # BridgeRace_DinhTrong
+
+APK : https://drive.google.com/drive/folders/1BSiW7BKCMpqe09-Sv_qxjAYv2LV1SCII?usp=sharing
  
-![Screenshot 2024-05-21 031842](https://github.com/TDTer/BridgeRace_DinhTrong/assets/80698862/a21a21e1-a4ad-4f04-9fe2-924a32fabea6)
+#### Game Screenshots
+
+<table>
+   <tr>
+    <td><img src="Screenshots/1.png" width=270 height=480></td>
+    <td><img src="Screenshots/2.png" width=270 height=480></td>
+    <td><img src="Screenshots/3.png" width=270 height=480></td>
+    <td><img src="Screenshots/4.png" width=270 height=480></td>
+  </tr>
+ </table>
