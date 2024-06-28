@@ -1,6 +1,6 @@
 # BridgeRace_DinhTrong
 
-APK : https://drive.google.com/drive/folders/1BSiW7BKCMpqe09-Sv_qxjAYv2LV1SCII?usp=sharing
+APK : [Link](https://drive.google.com/file/d/1O-z5Wuy5o6e1o3ZkgxOGt3auES9oi3kJ/view?usp=sharing)
  
 #### Game Screenshots
 
