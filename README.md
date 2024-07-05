@@ -16,4 +16,4 @@ APK : [Link](https://drive.google.com/file/d/1O-z5Wuy5o6e1o3ZkgxOGt3auES9oi3kJ/v
  </table>
 
 #### Game Demo
-[![Watch the video](https://play-lh.googleusercontent.com/tuI-qHax_260frqV2TuIT_EoAHMGs-8zwAMf0bnjfftmWaGVZx6Tjwm2vseYZXfldNg)](https://youtu.be/eoSVpyv1kbY)
+[![Watch the video](https://play-lh.googleusercontent.com/asv8-slFqeClGXBmtoWgjrr9npGArM5du7q3-N5VR1y_KBpkAgpn-5eypm9MT8nkbig)](https://youtu.be/eoSVpyv1kbY)
