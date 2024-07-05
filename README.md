@@ -8,6 +8,8 @@ APK : [Link](https://drive.google.com/file/d/1O-z5Wuy5o6e1o3ZkgxOGt3auES9oi3kJ/v
    <tr>
     <td><img src="Screenshots/1.png" width=270 height=480></td>
     <td><img src="Screenshots/2.png" width=270 height=480></td>
+  </tr>
+  <tr>
     <td><img src="Screenshots/3.png" width=270 height=480></td>
     <td><img src="Screenshots/4.png" width=270 height=480></td>
   </tr>
